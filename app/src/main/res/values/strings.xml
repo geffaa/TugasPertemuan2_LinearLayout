@@ -1,0 +1,11 @@
+<resources>
+    <string name="count_name">0</string>
+    <string name="toast">TOAST</string>
+    <string name="hitung">HITUNG</string>
+    <string name="bmi_calculator">BMI Calculator</string>
+    <string name="berat_badan">Berat Badan</string>
+    <string name="masukkan_berat_badan">Masukkan Berat Badan (Kg)</string>
+    <string name="tinggi_badan">Tinggi Badan</string>
+    <string name="masukkan_tinggi_badan">Masukkan Tinggi Badan (Cm)</string>
+    <string name="keterangan">Keterangan</string>
+</resources>
