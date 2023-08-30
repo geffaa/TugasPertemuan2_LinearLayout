@@ -25,47 +25,39 @@ class BmiActivity : AppCompatActivity() {
         binding = ActivityBmiBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        with(binding){
-
-            btnHitung.setOnClickListener {
+        with(binding) {
+            btnCount.setOnClickListener {
                 try {
                     val simpanBerat = beratBadan.text.toString()
                     val simpanTinggi = tinggiBadan.text.toString()
 
                     berat = simpanBerat.toDouble()
-                    tinggi = simpanTinggi.toDouble()/100
+                    tinggi = simpanTinggi.toDouble() / 100
 
-                    count = berat / (tinggi*tinggi)
+                    count = berat / (tinggi * tinggi)
                     val decimalFormat = DecimalFormat("#.##")
                     count = decimalFormat.format(count).toDouble()
 
-                    if (count <= badanKurus){
+                    if (count <= badanKurus) {
                         keterangan = "Berat Badan Kurang"
-                    }
-                    else if (count <= badanNormal){
+                    } else if (count <= badanNormal) {
                         keterangan = "Berat Badan Normal"
-                    }
-                    else if (count <= badanGendut){
+                    } else if (count <= badanGendut) {
                         keterangan = "Kelebihan Berat Badan"
-                    }
-                    else {
+                    } else {
                         keterangan = "Obesitas"
                     }
 
                     hasil.text = count.toString()
                     viewKeterangan.text = keterangan
-                }
-                catch (e: Exception){
+                } catch (e: Exception) {
                     viewKeterangan.text = "Data belum dimasukkan"
                 }
-
-                btnToast.setOnClickListener {
-                    Toast.makeText(this@BmiActivity,"Berhasil!", Toast.LENGTH_SHORT).show()
-                }
-
             }
 
+            btnToast.setOnClickListener {
+                Toast.makeText(this@BmiActivity, "Berhasil!", Toast.LENGTH_SHORT).show()
+            }
         }
-
     }
 }
